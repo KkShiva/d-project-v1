@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!181963792 &2655988077585873504
+Preset:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Antialiasing
+  m_TargetType:
+    m_NativeTypeID: 114
+    m_ManagedTypePPtr: {fileID: 11500000, guid: dafe6bc5514d4c2c903fba517d1f7920, type: 3}
+    m_ManagedTypeFallback: 
+  m_Properties:
+  - target: {fileID: 0}
+    propertyPath: m_Enabled
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorHideFlags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorClassIdentifier
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: mode
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: showGeneratedNormals
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: offsetScale
+    value: 0.2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: blurRadius
+    value: 18
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: edgeThresholdMin
+    value: 0.05
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: edgeThreshold
+    value: 4.88
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: edgeSharpness
+    value: 7.19
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: dlaaSharp
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: ssaaShader
+    value: 
+    objectReference: {fileID: 4800000, guid: e383b0bbe8b5495393a51ee872e0efdd, type: 3}
+  - target: {fileID: 0}
+    propertyPath: dlaaShader
+    value: 
+    objectReference: {fileID: 4800000, guid: 5f8e0c1d2ae84c70bb76526131110282, type: 3}
+  - target: {fileID: 0}
+    propertyPath: nfaaShader
+    value: 
+    objectReference: {fileID: 4800000, guid: e7369dc5a9914e37ac1c50cf585d7857, type: 3}
+  - target: {fileID: 0}
+    propertyPath: shaderFXAAPreset2
+    value: 
+    objectReference: {fileID: 4800000, guid: 2d11539dd19947a68f1c39a90c2c9733, type: 3}
+  - target: {fileID: 0}
+    propertyPath: shaderFXAAPreset3
+    value: 
+    objectReference: {fileID: 4800000, guid: 40aed227bb9e4d5b8a6ab2e44348af4f, type: 3}
+  - target: {fileID: 0}
+    propertyPath: shaderFXAAII
+    value: 
+    objectReference: {fileID: 4800000, guid: 3cdb35578cc84e40aefc823c2978b992, type: 3}
+  - target: {fileID: 0}
+    propertyPath: shaderFXAAIII
+    value: 
+    objectReference: {fileID: 4800000, guid: 60dcb991027c4648bfc22a2017474aa5, type: 3}
+  m_ExcludedProperties: []

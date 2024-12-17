@@ -1,0 +1,179 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!181963792 &2655988077585873504
+Preset:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: BloomAndFlares
+  m_TargetType:
+    m_NativeTypeID: 114
+    m_ManagedTypePPtr: {fileID: 11500000, guid: 7692e554ae31424ab9a6641f66dd8d8a, type: 3}
+    m_ManagedTypeFallback: 
+  m_Properties:
+  - target: {fileID: 0}
+    propertyPath: m_Enabled
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorHideFlags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorClassIdentifier
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: tweakMode
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: screenBlendMode
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: hdr
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: sepBlurSpread
+    value: 5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: useSrcAlphaAsMask
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: bloomIntensity
+    value: 1.31
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: bloomThreshold
+    value: 0.65
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: bloomBlurIterations
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: lensflares
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: hollywoodFlareBlurIterations
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: lensflareMode
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: hollyStretchWidth
+    value: 3.5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: lensflareIntensity
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: lensflareThreshold
+    value: 0.3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: flareColorA.r
+    value: 0.4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: flareColorA.g
+    value: 0.4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: flareColorA.b
+    value: 0.8
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: flareColorA.a
+    value: 0.75
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: flareColorB.r
+    value: 0.4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: flareColorB.g
+    value: 0.8
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: flareColorB.b
+    value: 0.8
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: flareColorB.a
+    value: 0.75
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: flareColorC.r
+    value: 0.8
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: flareColorC.g
+    value: 0.4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: flareColorC.b
+    value: 0.8
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: flareColorC.a
+    value: 0.75
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: flareColorD.r
+    value: 0.8
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: flareColorD.g
+    value: 0.4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: flareColorD.b
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: flareColorD.a
+    value: 0.75
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: lensFlareVignetteMask
+    value: 
+    objectReference: {fileID: 2800000, guid: 637ba58ee4e24a9f9a837fcbba9715c6, type: 3}
+  - target: {fileID: 0}
+    propertyPath: lensFlareShader
+    value: 
+    objectReference: {fileID: 4800000, guid: 3b55272732f5401d820a6097e4315a36, type: 3}
+  - target: {fileID: 0}
+    propertyPath: vignetteShader
+    value: 
+    objectReference: {fileID: 4800000, guid: b52eb19be341425cb756a43c7297b8dd, type: 3}
+  - target: {fileID: 0}
+    propertyPath: separableBlurShader
+    value: 
+    objectReference: {fileID: 4800000, guid: 65a61ae2ebc144aaabdaab80350c1bbb, type: 3}
+  - target: {fileID: 0}
+    propertyPath: addBrightStuffOneOneShader
+    value: 
+    objectReference: {fileID: 4800000, guid: ba3666e7392449fc84f0de4e0a8c8590, type: 3}
+  - target: {fileID: 0}
+    propertyPath: screenBlendShader
+    value: 
+    objectReference: {fileID: 4800000, guid: 99126d9730ad432180f525d842c1e8d5, type: 3}
+  - target: {fileID: 0}
+    propertyPath: hollywoodFlaresShader
+    value: 
+    objectReference: {fileID: 4800000, guid: aeb0815a828b4a54b8e4799055131479, type: 3}
+  - target: {fileID: 0}
+    propertyPath: brightPassFilterShader
+    value: 
+    objectReference: {fileID: 4800000, guid: b5415938c1b442d6b3de16db5c81c024, type: 3}
+  m_ExcludedProperties: []

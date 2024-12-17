@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Player 1
+  - Player 2
+  - Player 3
+  - FxTemporaire
+  - coin
+  - coin2
+  - coin3
+  - Speedquadruple
+  - Speedtriple
+  - Speeddouble
+  - Invincible
+  - Magnet
+  - TelepoteWorld
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Ground
+  - Water
+  - UI
+  - Wall
+  - Player
+  - Blocks
+  - Next level
+  - execlude
+  - Missile_1
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
