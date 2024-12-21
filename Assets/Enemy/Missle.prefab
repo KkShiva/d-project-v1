@@ -52,7 +52,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 110
   rotationSpeed: 1000
-  focusDistance: 30
+  focusDistance: 20
   targetTag: Player
 --- !u!114 &2490932047522469488
 MonoBehaviour:
@@ -72,6 +72,7 @@ MonoBehaviour:
   minSpawnTime: 1
   maxSpawnTime: 5
   spawnPoint: {fileID: 543695546464391735}
+  interval: 30
 --- !u!65 &3454437559417226602
 BoxCollider:
   m_ObjectHideFlags: 0

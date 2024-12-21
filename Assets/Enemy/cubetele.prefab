@@ -138,6 +138,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9bcc183883db1c488abf4b7d3c5a652, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startScale: 0.2
-  targetScale: 0.75
+  startScale: 0.16
+  targetScale: 0.36
   duration: 2
