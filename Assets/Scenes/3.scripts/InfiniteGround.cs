@@ -7,8 +7,8 @@ public class InfiniteGround : MonoBehaviour
     public GameObject[] planePrefabs; // Array of plane prefabs to instantiate
 
     [Header("Player and Grid Settings")]
-    public Transform player; // The player object
-    public Camera mainCamera; // The main camera
+    private Transform player; // The player object
+    private Camera mainCamera; // The main camera
     public Vector2Int gridSize = new Vector2Int(3, 3); // Size of the grid (3x3)
     public int planeSize = 2000; // Size of each plane (assumed to be square)
 
@@ -18,6 +18,7 @@ public class InfiniteGround : MonoBehaviour
     {
         // Find the player object by tag
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+        mainCamera = Camera.main;
         if (playerObject != null)
         {
             player = playerObject.transform;

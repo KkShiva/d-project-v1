@@ -6,6 +6,10 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance; // Singleton instance
 
     public string sceneToDestroy = "main menu"; // Name of the scene where this object should be destroyed
+    public Transform childObject ; // Name of the child object to reset position
+    public Transform E1Object ; // Name of the child object to reset position
+    public Transform E2Object ; // Name of the child object to reset position
+    public Transform E3Object ; // Name of the child object to reset position
 
     void Awake()
     {
@@ -34,7 +38,24 @@ public class GameManager : MonoBehaviour
         if (scene.name == sceneToDestroy)
         {
             Destroy(gameObject);
+            return;
         }
+
+        // Reset position of the specified child object
+        ResetChildObjectPosition();
+    }
+
+    void ResetChildObjectPosition()
+    {
+        // Find the child object by name
+        //Transform childObject = transform.Find(childObjectName);
+      
+            childObject.position = new Vector3(0, 30, 0);
+
+            E1Object.position = new Vector3(0,1,-70);
+            E2Object.position = new Vector3(0,1,-70);
+            E3Object.position = new Vector3(0,1,-70);
+
     }
 
     void OnEnable()
