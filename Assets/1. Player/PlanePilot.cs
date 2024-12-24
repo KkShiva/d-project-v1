@@ -39,7 +39,7 @@ public class PlanePilot : MonoBehaviour
     public GameObject MagnetVfxGui;
     public GameObject MagnetVfx;
     public bool Magnet=false;
-    [SerializeField] private TextMeshProUGUI speedText; // Reference to the TextMeshPro object
+    [SerializeField] private TextMeshPro speedText; // Reference to the TextMeshPro object
  public bool collideSometing;
 
 
@@ -60,10 +60,11 @@ public class PlanePilot : MonoBehaviour
 
     private bool isInvincible = false;
     public float currentHealth;
+    public Image healthBar;
     
 
         [Header("UI Components")]
-    public TextMeshProUGUI healthText;
+    public TextMeshPro healthText;
 
      [Header("Score Settings")]
      public int score = 0;
@@ -72,14 +73,15 @@ public class PlanePilot : MonoBehaviour
     public TextMeshProUGUI scoreText; // Reference to your UI Text component
 
     [Header("Slider Settings")]
-    public Slider fillSlider; // The UI slider to fill over time
-    public float fillSpeed = 0.5f; // Speed at which the slider fills
+    [SerializeField] private Image PowerBar; // Reference to the Image with fillAmount
+    [SerializeField] private float fillSpeed = 1f; // Speed at which the bar fills
+    [SerializeField] private float maxFillTime = 3f; // Time to fully fill the bar
+    private float fillTimer = 0f; // Tracks elapsed time
+    private bool isFilling = false; // Controls whether the bar is filling
 
     [Header("Spawn Settings")]
     public GameObject objectToSpawn; // The GameObject to spawn
     public Transform spawnPosition; // Position where the object will be spawned
-
-    private bool isFilling = true; // To control the fill process
 
     [Header("Scene Settings")]
     public string firstSceneName = "1.Night";  // Replace with your first scene's name
@@ -119,15 +121,18 @@ public class PlanePilot : MonoBehaviour
         {
             Debug.LogWarning("Gyroscope not supported on this device.");
         }
+        StartFilling();
 
     }
     private void UpdateUI()
     {
+        float fillValue = Mathf.Clamp01(currentHealth / maxHealth);
         // Update health text and slider
         if (healthText != null)
-            healthText.text = $"HP : {currentHealth:F1}";
+            healthText.text = $"{currentHealth:F1}";
+            healthBar.fillAmount = fillValue;
         
-        scoreText.text = "Score: " + score;
+        scoreText.text = "" + score;
 
     }
 
@@ -144,7 +149,15 @@ public class PlanePilot : MonoBehaviour
 
         }
     }
+    public void StartFilling()
+    {
+        isFilling = true;
+    }
 
+    public void StopFilling()
+    {
+        isFilling = false;
+    }
     void SpawnTele()
     {
         if (objectToSpawn != null && spawnPosition != null)
@@ -163,23 +176,27 @@ public class PlanePilot : MonoBehaviour
 
         if (isFilling)
         {
-            // Increment slider value over time
-            fillSlider.value += fillSpeed * Time.deltaTime;
+            // Increment the fill timer
+            fillTimer += Time.deltaTime * fillSpeed;
 
-            // Check if the slider is completely filled
-            if (fillSlider.value >= fillSlider.maxValue)
+            // Update the PowerBar fillAmount (value between 0 and 1)
+            PowerBar.fillAmount = fillTimer / maxFillTime;
+
+            // Check if the bar is completely filled
+            if (fillTimer >= maxFillTime)
             {
                 // Spawn the object
                 SpawnTele();
 
-                // Reset the slider
-                fillSlider.value = 0;
+                // Reset the fill timer and PowerBar
+                fillTimer = 0f;
+                PowerBar.fillAmount = 0f;
             }
         }
         
         UpdateUI();
         // Update the TextMesh Pro text with the currentSpeed value
-        speedText.text = "Speed: " + (currentSpeed * speedMultiplier).ToString("F2");
+        speedText.text =  (currentSpeed * speedMultiplier).ToString("F2");
         // Get joystick input
 
        float inputH;

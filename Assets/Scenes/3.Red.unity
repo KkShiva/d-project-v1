@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
+  m_Fog: 1
   m_FogColor: {r: 0.8745098, g: 0.7764706, b: 0.61960787, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.0015
@@ -16049,6 +16049,7 @@ MonoBehaviour:
   minSpawnTime: 5
   maxSpawnTime: 25
   spawnPoint: {fileID: 631455073}
+  interval: 30
 --- !u!114 &631455072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17236,10 +17237,8 @@ MonoBehaviour:
   - {fileID: 1211553477457907215, guid: 29a7f3847933e0e4da6fe1215d4781cb, type: 3}
   - {fileID: 1211553477457907215, guid: 29a7f3847933e0e4da6fe1215d4781cb, type: 3}
   - {fileID: 1211553477457907215, guid: 29a7f3847933e0e4da6fe1215d4781cb, type: 3}
-  player: {fileID: 2105896914}
-  mainCamera: {fileID: 2105896917}
-  gridSize: {x: 2, y: 1}
-  planeSize: 4000
+  gridSize: {x: 1, y: 1}
+  planeSize: 2000
 --- !u!108 &915887392
 Light:
   m_ObjectHideFlags: 0
@@ -17549,6 +17548,7 @@ MonoBehaviour:
   minSpawnTime: 10
   maxSpawnTime: 35
   spawnPoint: {fileID: 969864161}
+  interval: 30
 --- !u!114 &969864164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17839,7 +17839,7 @@ MonoBehaviour:
   MagnetVfxGui: {fileID: 534371423}
   MagnetVfx: {fileID: 793226092}
   Magnet: 0
-  speedText: {fileID: 1568188089}
+  speedText: {fileID: 0}
   collideSometing: 0
   Blocks: Blocks
   Blocks_Damage: 100
@@ -17850,11 +17850,14 @@ MonoBehaviour:
   maxHealth: 100
   InvincibleVfx: {fileID: 1336762682}
   InvincibleVfxGui: {fileID: 1429408543}
-  healthText: {fileID: 2137933481}
+  currentHealth: 0
+  healthBar: {fileID: 0}
+  healthText: {fileID: 0}
   score: 3
   scoreText: {fileID: 340327134}
-  fillSlider: {fileID: 1455375655}
+  PowerBar: {fileID: 0}
   fillSpeed: 0.02
+  maxFillTime: 3
   objectToSpawn: {fileID: 3569078979122984414, guid: b828f6aa41457ac4fa68db2f1260aeb1, type: 3}
   spawnPosition: {fileID: 198354861}
   firstSceneName: 1.Night
@@ -38313,6 +38316,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333c7cf48fd2adc42a0f737d183696d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneToDestroy: main menu
+  childObject: {fileID: 0}
+  E1Object: {fileID: 0}
+  E2Object: {fileID: 0}
+  E3Object: {fileID: 0}
 --- !u!4 &1611655086
 Transform:
   m_ObjectHideFlags: 0
@@ -38689,6 +38697,7 @@ MonoBehaviour:
   minSpawnTime: 9
   maxSpawnTime: 20
   spawnPoint: {fileID: 1680715998}
+  interval: 30
 --- !u!114 &1680715997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45313,11 +45322,6 @@ Transform:
 --- !u!1 &2105896916 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6923667052971952040, guid: 92984ee4aeaed0d45b64df34f6ed0ec7, type: 3}
-  m_PrefabInstance: {fileID: 2105896913}
-  m_PrefabAsset: {fileID: 0}
---- !u!20 &2105896917 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 6923667052971952042, guid: 92984ee4aeaed0d45b64df34f6ed0ec7, type: 3}
   m_PrefabInstance: {fileID: 2105896913}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2105896918 stripped

@@ -17,6 +17,7 @@ TagManager:
   - Invincible
   - Magnet
   - TelepoteWorld
+  - Missile
   layers:
   - Default
   - TransparentFX

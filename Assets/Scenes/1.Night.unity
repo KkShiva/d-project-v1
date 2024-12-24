@@ -22903,11 +22903,6 @@ MonoBehaviour:
   screenBlendShader: {fileID: 4800000, guid: 99126d9730ad432180f525d842c1e8d5, type: 3}
   hollywoodFlaresShader: {fileID: 4800000, guid: aeb0815a828b4a54b8e4799055131479, type: 3}
   brightPassFilterShader: {fileID: 4800000, guid: b5415938c1b442d6b3de16db5c81c024, type: 3}
---- !u!20 &552359648 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 6923667052971952042, guid: 92984ee4aeaed0d45b64df34f6ed0ec7, type: 3}
-  m_PrefabInstance: {fileID: 1401012909}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &555344200
 GameObject:
   m_ObjectHideFlags: 0
@@ -24234,6 +24229,7 @@ MonoBehaviour:
   minSpawnTime: 10
   maxSpawnTime: 35
   spawnPoint: {fileID: 615105196}
+  interval: 30
 --- !u!114 &615105195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24469,6 +24465,7 @@ MonoBehaviour:
   minSpawnTime: 5
   maxSpawnTime: 25
   spawnPoint: {fileID: 618698366}
+  interval: 30
 --- !u!114 &618698365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31377,6 +31374,7 @@ GameObject:
   - component: {fileID: 705507995}
   - component: {fileID: 705507994}
   - component: {fileID: 705507996}
+  - component: {fileID: 705507997}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -31475,14 +31473,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   planePrefabs:
   - {fileID: 2120544260506710155, guid: d937b07e4933dd240bdf51770d4bc8fa, type: 3}
-  - {fileID: 2120544260506710155, guid: 52e73ec2ca4f2824f848cabf8cff2ca6, type: 3}
-  - {fileID: 2120544260506710155, guid: b0533173a8cad604e8c58015f5ffa905, type: 3}
-  - {fileID: 2120544260506710155, guid: ad69df8e7480e47498e31d42e0da55e7, type: 3}
-  - {fileID: 2120544260506710155, guid: 7d7c69c2da199844a8d20b0146d3e47a, type: 3}
-  player: {fileID: 1688077877}
-  mainCamera: {fileID: 552359648}
+  - {fileID: 2120544260506710155, guid: d937b07e4933dd240bdf51770d4bc8fa, type: 3}
+  - {fileID: 2120544260506710155, guid: d937b07e4933dd240bdf51770d4bc8fa, type: 3}
+  - {fileID: 2120544260506710155, guid: d937b07e4933dd240bdf51770d4bc8fa, type: 3}
+  - {fileID: 2120544260506710155, guid: d937b07e4933dd240bdf51770d4bc8fa, type: 3}
   gridSize: {x: 3, y: 3}
   planeSize: 8000
+--- !u!114 &705507997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705507993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dbd4a08f4d99354e9d9f784c25f845c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTag: Missile
+  maxCount: 10
 --- !u!1 &712586069
 GameObject:
   m_ObjectHideFlags: 0
@@ -64171,7 +64181,7 @@ MonoBehaviour:
   MagnetVfxGui: {fileID: 87975152}
   MagnetVfx: {fileID: 1663570098}
   Magnet: 0
-  speedText: {fileID: 1942910607}
+  speedText: {fileID: 0}
   collideSometing: 0
   Blocks: Blocks
   Blocks_Damage: 100
@@ -64182,11 +64192,14 @@ MonoBehaviour:
   maxHealth: 100
   InvincibleVfx: {fileID: 1058373023}
   InvincibleVfxGui: {fileID: 25490207}
-  healthText: {fileID: 584564884}
+  currentHealth: 0
+  healthBar: {fileID: 0}
+  healthText: {fileID: 0}
   score: 3
   scoreText: {fileID: 927911527}
-  fillSlider: {fileID: 1447060935}
+  PowerBar: {fileID: 0}
   fillSpeed: 0.02
+  maxFillTime: 3
   objectToSpawn: {fileID: 3569078979122984414, guid: b828f6aa41457ac4fa68db2f1260aeb1, type: 3}
   spawnPosition: {fileID: 2052782325}
   firstSceneName: 1.Night
@@ -82152,6 +82165,7 @@ MonoBehaviour:
   minSpawnTime: 9
   maxSpawnTime: 20
   spawnPoint: {fileID: 2010984693}
+  interval: 30
 --- !u!114 &2010984692
 MonoBehaviour:
   m_ObjectHideFlags: 0
